@@ -25,6 +25,20 @@
 
   color: white;
 }
+.navbar.bg-primary {
+  background-color: grey;
+  padding: 5px;
+  margin: 5vh;
+  box-shadow: black;
+  text-shadow: black;
+  border-radius: 5vh;
+  cursor: alias;
+}
+
+i {
+  color: aqua;
+  cursor: col-resize;
+}
 
 .App-link {
   color: #61dafb;
