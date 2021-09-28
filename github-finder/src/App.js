@@ -8,7 +8,7 @@ import './App.css';
 import Alert from './components/layout/Alert';
 import About from './components/pages/About';
 import { Fragment } from 'react';
-
+import User from './components/users/User';
 class App extends Component {
   state ={
     users: [],
@@ -29,6 +29,14 @@ class App extends Component {
   this.setState({users: res.data.items, loading: false})
    
  } 
+
+ getUser = async (username) =>{
+     
+  this.setState( { loading: true } );
+  const res = await axios.get(`https://api.github.com/search/users?q=${text}&clien t_id=${process.env.REACT_APP_GITHUB_CIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`)
+  this.setState({users: res.data.items, loading: false})
+   
+ }
 
  //this function through searchUser.js
 
@@ -67,6 +75,10 @@ setTimeout(() => this.setState({alert:null }), 5000)
       )}/>
       
       <Route exact path='/about' component={About} />
+      <Route exact path='/user/:login:' render={props =>(
+        <User {...props} getUser={this.getUser} user={user} loading={loading} />
+      )}
+      
       </Switch>
       
       </div>
