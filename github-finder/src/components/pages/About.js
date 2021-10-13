@@ -1,11 +1,15 @@
 import React from 'react'
-
-function About() {
+import { Fragment } from 'react';
+const About =()=> {
     return (
-        <div>
-            <h1>This is About Page</h1>
+        <Fragment>
+            <h1>This is About GitHub Finder App</h1>
             <p>This app will search about the users From GITHUB</p>
-        </div>
+    
+    
+        </Fragment>
+    
+    
     )
 }
 

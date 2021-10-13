@@ -38,6 +38,23 @@
   text-shadow: black;
   border-radius: 5vh;
   cursor: alias;
+  flex-grow: unset;
+}
+
+.linksnavbar{
+  text-size-adjust: 40%;
+  color: #61dafb;
+  flex-direction: row;
+}
+
+.form {
+
+  margin: 50px;
+  padding: 45px;
+  border: #61dafb;
+  
+
+
 }
 
 i {
